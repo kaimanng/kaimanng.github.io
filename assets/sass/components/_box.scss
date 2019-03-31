@@ -1,16 +1,21 @@
+@import '../libs/vars';
+@import '../libs/functions';
+@import '../libs/mixins';
+
 ///
-/// Massively by HTML5 UP
-/// html5up.net | @ajlkn
-/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+/// Retrospect by TEMPLATED
+/// templated.co @templatedco
+/// Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 ///
 
 /* Box */
 
 	.box {
 		border-radius: _size(border-radius);
-		border: solid 2px;
+		border-style: solid;
+		border-width: _size(border-width);
 		margin-bottom: _size(element-margin);
-		padding: 1.5rem;
+		padding: 1.5em;
 
 		> :last-child,
 		> :last-child > :last-child,
@@ -25,10 +30,11 @@
 		}
 	}
 
+
 	@mixin color-box($p: null) {
- 		.box {
- 			border-color: _palette($p, border);
- 		}
+		.box {
+			border-color: _palette($p, border);
+		}
 	}
 
 	@include color-box;
